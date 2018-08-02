@@ -7,20 +7,20 @@ const Chart = (props) => {
     return (
         <div className="chart">
             <ul className="chart-list">
-                <li className="chart-list__item">
-                <NavLink to='/'>
+                <li >
+                <NavLink exact to='/' className="chart-list__item" activeClassName='select'>
                 Artists
                 </NavLink>
                 </li>
                 
-                <li className="chart-list__item">
-                <NavLink to='/albums'>
+                <li >
+                <NavLink to='/albums' className="chart-list__item" activeClassName='select'>
                 Albums
                 </NavLink>
                 </li>
                 
-                <li className="chart-list__item">
-                <NavLink to='/song'>
+                <li >
+                <NavLink to='/song' className="chart-list__item" activeClassName='select'>
                 Songs
                 </NavLink>
                 </li>

@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import Album from '../Album/Album';
 import styles from './AlbumPage.css';
+import FlipMove from "react-flip-move"; 
 
 
 const AlbumPage = ({albumData}) => {
     return (
+        <FlipMove>
         <div className='content'>
-                {albumData.map(el => <Album src={el.image[2]['#text']} album={el.name} artist={el.artist}/>)}            
+               
+                {albumData.map(el => <Album src={el.image[2]['#text']} album={el.name} artist={el.artist}/>)} 
+                         
         </div>
+        </FlipMove> 
     );
 }
 

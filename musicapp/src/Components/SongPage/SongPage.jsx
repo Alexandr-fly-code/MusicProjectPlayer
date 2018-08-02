@@ -4,14 +4,17 @@ import './SongPage.css';
 import Song from '../Song/Song';
 import axios from 'axios';
 import './SongPage.css';
-
+import FlipMove from "react-flip-move";
 
 const SongPage = ({getSong}) => {
     return (
+        <FlipMove>
         <div class='content'>
-           {getSong.map(el => <Song src={el.image[1]['#text']} nameArtist={el.artist.name} nameAlbum={el.name}/>)}
             
+           {getSong.map(el => <Song src={el.image[1]['#text']} nameArtist={el.artist.name} nameAlbum={el.name}/>)}
         </div>
+        </FlipMove>
+
     );
 }
 
